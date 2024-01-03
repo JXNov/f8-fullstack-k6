@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 100px 100px 0 100px;
+}
+
+.contact {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        'heading heading'
+        'info form';
+}
+
+.contact-heading {
+    margin-bottom: 40px;
+    font-size: 32px;
+    text-transform: uppercase;
+    grid-area: heading;
+}
+
+.contact-heading::after {
+    content: '';
+    display: block;
+    width: 4%;
+    height: 2px;
+    background-color: orange;
+    margin-top: 10px;
+}
+
+.info {
+    grid-area: info;
+}
+
+.info-heading {
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.info-list {
+    list-style: none;
+}
+
+.info-list__item {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    color: #888888;
+}
+
+.info-list__item i {
+    width: 30px;
+    font-size: 24px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.contact-form {
+    grid-area: form;
+}
+
+.form-heading {
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.form__group {
+    margin-bottom: 10px;
+}
+
+.form__input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #a7a7a7;
+    outline: none;
+}
+
+.form__button {
+    padding: 14px 20px;
+    border: none;
+    background-color: rgb(12, 161, 180);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.form__button:hover {
+    background-color: rgb(0, 119, 133);
+    transition: all 0.3s ease-in-out;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ex 03 Day 3</title>
+
+        <style>
+            .container {
+                width: 50%;
+                margin: 0 auto;
+            }
+
+            .form-control {
+                margin-bottom: 1rem;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .form-control label {
+                margin-bottom: 0.5rem;
+            }
+
+            .form-control input,
+            .form-control select {
+                padding: 0.5rem;
+                border: 1px solid #ccc;
+                border-radius: 0.25rem;
+            }
+
+            .form-control button {
+                padding: 0.5rem 1rem;
+                border: 1px solid #ccc;
+                border-radius: 0.25rem;
+                background-color: #fff;
+                cursor: pointer;
+            }
+
+            .btns {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <main class="container">
+            <form action="">
+                <div class="form-control">
+                    <label for="name">Username:</label>
+                    <input type="text" id="name" name="name" />
+                </div>
+
+                <div class="form-control">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" />
+                </div>
+
+                <div class="form-control">
+                    <label for="city">City of Employment:</label>
+                    <input type="text" name="city" id="city" />
+                </div>
+
+                <div class="form-control">
+                    <label for="webserver">Web Server:</label>
+                    <select name="webserver" id="webserver">
+                        <option value="None">-- Choose a server--</option>
+                        <option value="Apache">Apache</option>
+                        <option value="Nginx">Nginx</option>
+                        <option value="IIS">IIS</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-control">
+                    <label>Please specify your role:</label>
+
+                    <div>
+                        <label>
+                            <input type="radio" name="role" value="Admin" />
+                            Admin
+                        </label>
+
+                        <label>
+                            <input type="radio" name="role" value="Engineer" />
+                            Engineer
+                        </label>
+
+                        <label>
+                            <input type="radio" name="role" value="Manager" />
+                            Manager
+                        </label>
+
+                        <label>
+                            <input type="radio" name="role" value="Guest" />
+                            Guest
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-control">
+                    <label>Single Sign-on to the following:</label>
+
+                    <div>
+                        <label>
+                            <input type="checkbox" name="service" value="1" />
+                            Mail
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="service" value="2" />
+                            Calendar
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="service" value="3" />
+                            Self-Service
+                        </label>
+                    </div>
+                </div>
+
+                <div class="btns">
+                    <button type="submit">Login</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
+        </main>
+    </body>
+</html>
