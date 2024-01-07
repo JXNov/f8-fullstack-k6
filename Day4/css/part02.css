@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #392516;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-booking {
+    width: 100%;
+    max-width: 800px;
+}
+
+.form-booking p {
+    font-size: 36px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.form-booking h2 {
+    font-size: 66px;
+    font-weight: 900;
+    margin: 20px 0;
+    text-align: center;
+    font-family: "Alfa Slab One", serif;
+}
+
+.form-booking form {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.form-booking .form-left {
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-booking .form-right {
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-booking .form-control {
+    margin-bottom: 20px;
+}
+
+.form-booking .form-control input {
+    font-family: "Bebas Neue", sans-serif;
+    color: #392516;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    font-size: 24px;
+}
+
+.form-booking .form-control input::placeholder {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #392516;
+}
+
+.form-booking .form-right button {
+    font-family: "Alfa Slab One", serif;
+    width: 100%;
+    padding: 20px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    font-size: 16px;
+    line-height: 2;
+    background-color: #b0332b;
+    color: #fff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.form-booking .form-right button:hover {
+    opacity: 0.6;
+}
