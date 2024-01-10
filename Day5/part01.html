@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Part 01 Day 5</title>
+        <link rel="stylesheet" href="./css/part01.css" />
+    </head>
+    <body>
+        <main class="container">
+            <h1 class="title">Hey there</h1>
+
+            <p class="desc">
+                <span>We'd like to hear from you.</span> Send us your message or
+                just say hy with our contact form or directly via phone, we love
+                to chat.
+            </p>
+
+            <form action="">
+                <div class="form-control">
+                    <label>
+                        <i class="fa-solid fa-user"></i>
+
+                        <div class="form-input">
+                            <input
+                                type="text"
+                                name="fullname"
+                                id="fullname"
+                                placeholder="Your name"
+                            />
+
+                            <span class="form-icon">
+                                <i class="fas fa-star"></i>
+                                <i class="fa-solid fa-x"></i>
+                            </span>
+
+                            <span class="form-message">Enter your name</span>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="form-control">
+                    <label>
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <div class="form-input">
+                            <input
+                                type="mail"
+                                name="mail"
+                                id="mail"
+                                placeholder="your@domain.com"
+                            />
+
+                            <span class="form-icon">
+                                <i class="fas fa-star"></i>
+                                <i class="fa-solid fa-x"></i>
+                            </span>
+
+                            <span class="form-message">Enter your email</span>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="form-control">
+                    <label>
+                        <i class="fa-solid fa-mobile"></i>
+
+                        <div class="form-input">
+                            <input
+                                type="text"
+                                name="phone"
+                                id="phone"
+                                placeholder="+44 00 123"
+                            />
+
+                            <span class="form-message">Enter your phone</span>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="form-control">
+                    <label>
+                        <i class="fa-solid fa-book"></i>
+
+                        <div class="form-input">
+                            <select name="subject" id="">
+                                <option value="">Subject</option>
+                                <option value="">Subject 1</option>
+                                <option value="">Subject 2</option>
+                                <option value="">Subject 3</option>
+                            </select>
+
+                            <span class="form-icon">
+                                <i class="fa-solid fa-sort"></i>
+                                <i class="fa-solid fa-sort"></i>
+                            </span>
+
+                            <span class="form-message">Select a option</span>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="form-control">
+                    <label>
+                        <i class="fa-solid fa-message"></i>
+
+                        <div class="form-input">
+                            <textarea
+                                name="message"
+                                id="message"
+                                placeholder="Message"
+                            ></textarea>
+
+                            <span class="form-icon">
+                                <i class="fas fa-star"></i>
+                                <i class="fa-solid fa-x"></i>
+                            </span>
+
+                            <span class="form-message">Enter your message</span>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="submit">
+                    <div>
+                        <input type="checkbox" name="terms" id="terms" />
+                        <label for="terms">
+                            Send me a copy of this message
+                        </label>
+                    </div>
+
+                    <button type="submit">Send</button>
+                </div>
+            </form>
+        </main>
+
+        <script
+            src="https://kit.fontawesome.com/3d25968b04.js"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Lobster&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #a7a7a7;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.title {
+    font-family: "Lobster", sans-serif;
+    font-size: 62px;
+    font-weight: normal;
+    margin-bottom: 20px;
+    color: initial;
+}
+
+.desc {
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.desc span {
+    color: #ff0000;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-control {
+    position: relative;
+}
+
+.form-control label {
+    display: flex;
+    align-items: center;
+}
+
+.form-control label > i {
+    font-size: 20px;
+    background-color: #a7a7a7;
+    color: #fff;
+    padding: 20px;
+}
+
+.form-control:nth-child(5) label {
+    align-items: flex-start;
+    height: 100%;
+}
+
+.form-control:nth-child(5) label > i {
+    height: 200px;
+}
+
+.form-control:nth-child(5) label .form-icon {
+    top: 26px;
+}
+
+.form-control label .form-input {
+    flex: 1;
+    position: relative;
+}
+
+.form-control label input,
+.form-control label select,
+.form-control label textarea {
+    width: 100%;
+    height: 60px;
+    padding: 20px;
+    border: 2px solid #a7a7a7;
+    outline: none;
+    font-size: 16px;
+    color: #a7a7a7;
+}
+
+.form-control label select {
+    appearance: none;
+}
+
+.form-control label textarea {
+    resize: none;
+    height: 200px;
+}
+
+.form-control label .form-icon {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.form-control label .form-icon i {
+    font-size: 14px;
+    color: #a7a7a7;
+}
+
+.form-control label .form-icon i:last-child {
+    display: none;
+}
+
+.form-control label input:focus + .form-icon i:first-child {
+    display: none;
+}
+
+.form-control label input:focus + .form-icon i:last-child {
+    display: block;
+}
+
+.form-control label:hover > i {
+    background-color: #000;
+}
+
+.form-control label:hover input,
+.form-control label:hover select,
+.form-control label:hover textarea {
+    border-color: #000;
+}
+
+.form-control label:hover .form-icon i:first-child {
+    color: #000;
+}
+
+.form-control label:focus-within > i {
+    background-color: #000;
+}
+
+.form-control label:focus-within input {
+    border-color: #000;
+}
+
+.form-control label:focus-within .form-icon i:first-child {
+    display: none;
+}
+
+.form-control label:focus-within .form-icon i:last-child {
+    display: block;
+    color: #000;
+}
+
+.form-control label .form-message {
+    display: none;
+    position: absolute;
+    top: -60px;
+    left: 0px;
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 20px;
+}
+
+.form-control label .form-message::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 30%;
+    transform: translateX(-50%);
+    border: 10px solid transparent;
+    border-top-color: #000;
+}
+
+.form-control label input:focus ~ .form-message,
+.form-control label select:focus ~ .form-message,
+.form-control label textarea:focus ~ .form-message {
+    display: block;
+}
+
+.submit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.submit div {
+    display: flex;
+    align-items: center;
+}
+
+.submit div input {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.submit div label {
+    font-size: 14px;
+}
+
+.submit button {
+    width: 200px;
+    height: 60px;
+    background-color: orangered;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.submit button:hover {
+    opacity: 0.8;
+}
