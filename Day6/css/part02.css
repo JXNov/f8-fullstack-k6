@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #e8f0f8;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-layout {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 30px;
+    padding: 80px 0;
+}
+
+.service-layout .row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+.service {
+    position: relative;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.service::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: calc(100% + 1px);
+    height: calc(100% + 1px);
+    border-radius: inherit;
+    border: 3px solid #e56c63;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+.service:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.service .heading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.service .heading i {
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+.row:nth-child(1) .service:nth-child(1) .heading i {
+    background-image: linear-gradient(to right, #e46371, #e3765b);
+    box-shadow: 0 0 10px rgba(228, 99, 113, 0.3);
+}
+
+.row:nth-child(1) .service:nth-child(2) .heading i {
+    background-image: linear-gradient(to right, #53aaa3, #78d4a0);
+    box-shadow: 0 0 10px rgba(83, 170, 163, 0.3);
+}
+
+.row:nth-child(1) .service:nth-child(3) .heading i {
+    background-image: linear-gradient(to right, #f9a74b, #f9d423);
+    box-shadow: 0 0 10px rgba(249, 167, 75, 0.3);
+}
+
+.row:nth-child(2) .service:nth-child(1) .heading i {
+    background-image: linear-gradient(to right, #356dd0, #678cf0);
+    box-shadow: 0 0 10px rgba(53, 109, 208, 0.3);
+}
+
+.row:nth-child(2) .service:nth-child(2) .heading i {
+    background-image: linear-gradient(to right, #7627cd, #b558e8);
+    box-shadow: 0 0 10px rgba(118, 39, 205, 0.3);
+}
+
+.row:nth-child(2) .service:nth-child(3) .heading i {
+    background-image: linear-gradient(to right, #6a8a2d, #90c153);
+    box-shadow: 0 0 10px rgba(106, 138, 45, 0.3);
+}
+
+.service .heading h3 {
+    font-size: 20px;
+    color: #000;
+}
+
+.service p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.service .btn {
+    text-decoration: none;
+    transition: 0.3s;
+    color: #2e67eb;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.service .btn:hover {
+    opacity: 0.8;
+}
