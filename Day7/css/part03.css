@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Asap", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.title {
+    position: relative;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 20px 0;
+    text-transform: uppercase;
+    color: #3f3629;
+}
+
+.title::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 56%;
+    height: 1px;
+    background-color: #ddd;
+    z-index: -1;
+}
+
+.real-estate__option {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.real-estate__option--item {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #e5e5e5;
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.real-estate__option--name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
+.real-estate__option--number {
+    font-size: 12px;
+    font-weight: 500;
+    color: #000;
+    font-style: italic;
+}
+
+.real-estate__option--item:hover {
+    background-color: #ae7b37;
+}
+
+.real-estate__option--item:hover .real-estate__option--name,
+.real-estate__option--item:hover .real-estate__option--number {
+    color: #fff;
+}
+
+.real-estate__list {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.real-estate__list .row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.real-estate__item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+    cursor: pointer;
+    height: 240px;
+}
+
+.real-estate__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.real-estate__item--info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+}
+
+.real-estate__item--name {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.real-estate__item--number {
+    position: absolute;
+    bottom: 20px;
+    font-weight: 300;
+}
+
+.real-estate__item--number span {
+    font-weight: 600;
+}
