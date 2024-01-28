@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: #31a8f7;
+    color: #fff;
+    position: relative;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 6rem;
+}
+
+.burger-menu {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.burger-menu-text {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+.navbar-toogle-label {
+    position: absolute;
+    font-size: 1.6rem;
+    color: #31a8f7;
+    cursor: pointer;
+    padding: 1rem;
+    z-index: 1;
+    animation: rotate-back 0.3s ease-in-out;
+}
+
+.overlay {
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    background-color: #fff;
+    top: -5rem;
+    left: -5rem;
+    border-bottom-right-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-toogle-label:hover {
+    cursor: pointer;
+}
+
+.navbar-toogle {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar-toogle .navbar {
+    position: absolute;
+    top: 4rem;
+}
+
+.navbar-toogle .navbar li {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.navbar-toogle .navbar li a {
+    display: block;
+    text-decoration: none;
+    color: #31a8f7;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.2rem 3rem;
+    width: 200px;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-toogle .navbar li a:focus,
+.navbar-toogle .navbar li a:hover {
+    color: #000;
+    background-color: #ddd;
+}
+
+#navbar-toogle:checked ~ .navbar-toogle-label {
+    animation: rotate 0.3s ease-in-out;
+    visibility: hidden;
+}
+
+#navbar-toogle:checked ~ .navbar-toogle .navbar-toogle-label {
+    animation: rotate 0.3s ease-in-out forwards;
+}
+
+#navbar-toogle:checked ~ .navbar-toogle,
+#navbar-toogle:checked ~ .overlay {
+    display: block;
+    width: 200%;
+    height: 200%;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(45deg);
+    }
+
+    50% {
+        transform: rotate(90deg);
+    }
+
+    75% {
+        transform: rotate(135deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes rotate-back {
+    0% {
+        transform: rotate(180deg);
+    }
+
+    25% {
+        transform: rotate(135deg);
+    }
+
+    50% {
+        transform: rotate(90deg);
+    }
+
+    75% {
+        transform: rotate(45deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
