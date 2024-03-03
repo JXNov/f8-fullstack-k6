@@ -1,0 +1,82 @@
+@use "../parts/variables" as *;
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+
+    &-primary {
+        background: #46b20f;
+        color: #fff;
+
+        &:hover {
+            background: #ff6916;
+        }
+
+        &:active {
+            background: #e05000;
+        }
+
+        &:disabled {
+            background: #b7b7b7;
+            cursor: not-allowed;
+        }
+    }
+
+    &-more {
+        padding: 14px 26px;
+        background: transparent;
+        border: 1px solid #46b20f;
+        color: $textColor;
+
+        &::after {
+            content: "";
+            background-image: url("../../../assets/icons/arrow-right.svg");
+            background-size: 28px;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            margin-left: 6px;
+            transition: background-image 0.3s ease;
+        }
+
+        &:hover {
+            background: #46b20f;
+            color: #fff;
+
+            &::after {
+                background-image: url("../../../assets/icons/arrow-right-white.svg");
+            }
+        }
+
+        &:active {
+            background: #2e8900;
+            color: #fff;
+
+            &::after {
+                background-image: url("../../../assets/icons/arrow-right-white.svg");
+            }
+        }
+
+        &:disabled {
+            background: #b7b7b7;
+            color: #fff;
+            border: none;
+            cursor: not-allowed;
+
+            &::after {
+                background-image: url("../../../assets/icons/arrow-right-white.svg");
+            }
+        }
+    }
+}

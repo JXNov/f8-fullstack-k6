@@ -1,0 +1,134 @@
+.footer {
+    margin-top: 130px;
+    position: relative;
+    padding: 40px 0;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        inset: 0;
+        background-color: #f2ffec;
+        z-index: -1;
+    }
+
+    .content {
+        padding: 0 60px;
+    }
+
+    &-top {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 60px;
+        margin-bottom: 120px;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            left: 0;
+            bottom: -50%;
+            background-color: #a3a3a3;
+        }
+    }
+
+    &-logo {
+        .logo {
+            width: 100px;
+            height: 90px;
+            margin-bottom: 20px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+
+    &-nav {
+        .title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #46b20f;
+            margin: 0 0 20px 0;
+        }
+
+        &:nth-child(3) {
+            a {
+                font-weight: 600;
+            }
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                margin-bottom: 10px;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    text-decoration: none;
+                    color: #2c2c2c;
+                    font-size: 16px;
+                    font-weight: 400;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        color: #46b20f;
+                    }
+                }
+            }
+        }
+    }
+
+    &-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-verify {
+        width: 160px;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &-social {
+        display: flex;
+        gap: 20px;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #dcffca;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            }
+
+            svg {
+                font-size: 20px;
+                color: #2c2c2c;
+            }
+        }
+    }
+}

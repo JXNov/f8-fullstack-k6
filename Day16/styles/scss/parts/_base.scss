@@ -1,0 +1,32 @@
+@use "./variables" as *;
+
+.title {
+    color: $textColor;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 130%;
+}
+
+.subtitle {
+    color: $textColor;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.desc {
+    color: $textColor;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-center {
+    text-align: center;
+}

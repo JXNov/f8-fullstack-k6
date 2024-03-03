@@ -1,0 +1,20 @@
+@use "../parts/" as p;
+
+.container {
+    width: p.$containerWidth;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+
+[class^="col-"] {
+    padding: 0 10px;
+}
+
+@include p.column;
+@include p.media;

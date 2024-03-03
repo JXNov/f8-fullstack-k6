@@ -1,0 +1,29 @@
+@use "./variables" as v;
+
+@mixin column($breakpointPrefix: "") {
+    $selectorPrefix: "col-";
+    $offsetPrefix: "col-offset-";
+    @if ($breakpointPrefix != "") {
+        $selectorPrefix: $selectorPrefix + $breakpointPrefix + "-";
+        $offsetPrefix: $offsetPrefix + $breakpointPrefix + "-";
+    }
+
+    @for $i from 1 through v.$column {
+        .#{$selectorPrefix + $i} {
+            flex: 0 0 calc(100% / v.$column) * $i;
+            max-width: calc(100% / v.$column) * $i;
+        }
+
+        .#{$offsetPrefix + $i} {
+            margin-left: calc(100% / v.$column) * $i;
+        }
+    }
+}
+
+@mixin media {
+    @each $breakpoint in v.$breakpoints {
+        @media screen and (min-width: nth($breakpoint, 2)) {
+            @include column(nth($breakpoint, 1));
+        }
+    }
+}

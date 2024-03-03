@@ -1,0 +1,78 @@
+@use "../../parts/" as *;
+
+.hero {
+    position: relative;
+
+    .content {
+        justify-content: space-between;
+        align-items: center;
+        height: calc(100vh - 90px);
+    }
+
+    .text {
+        .title {
+            margin-bottom: -1.4rem;
+        }
+
+        .subtitle {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .banner {
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        border-radius: 16px 0px 0px 16px;
+        background: #dcffca;
+
+        .images {
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 80%;
+            overflow: hidden;
+
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            .bg-banner {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 80%;
+                height: 80%;
+                z-index: -1;
+            }
+
+            .chopstick:nth-child(1) {
+                transform: translate(-54%, -46%) rotate(-30deg);
+            }
+        }
+
+        .text {
+            transform: translate(60%, 10%) rotate(90deg);
+            width: fit-content;
+
+            .heading {
+                color: #216000;
+                font-size: 150px;
+                font-weight: 800;
+                opacity: 0.15;
+            }
+        }
+    }
+}

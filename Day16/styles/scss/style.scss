@@ -1,0 +1,12 @@
+// Component
+@use "./components/button";
+
+// Part
+@use "./parts/reset";
+
+// Layout
+@use "./layout/navbar";
+@use "./layout/footer";
+
+// Pages
+@use "./pages/home/index";
